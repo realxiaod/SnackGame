@@ -10,6 +10,36 @@ namespace SnackGame
         public int w = 80;
         public int h = 20;
 
-        ISceneChange nowScene;   
+        public static ISceneChange nowScene;
+
+        public void Start()
+        {
+            while (true)
+            {
+                if (nowScene != null)
+                {
+                    nowScene.Update();
+                }
+            }
+        }
+
+        public void GameSceneChange(E_Scene Scene){
+            
+            Console.Clear();
+            
+            switch (Scene)
+            {
+                case E_Scene.game:
+                    nowScene = new GameScene();
+                    break;
+                case E_Scene.start:
+                    nowScene = new BeginScene();
+                    break;
+                case E_Scene.end:
+                    nowScene = new EndScene();
+                    break;
+
+            }
+        }
     }
 }
