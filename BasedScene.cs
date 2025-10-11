@@ -5,11 +5,9 @@ using System.Threading.Tasks;
 
 namespace SnackGame
 {
-    public class BeginScene : ISceneChange
+    public class BasedScene
     {
-        public void Update()
-        {
-            
-        }
+     
+
     }
 }

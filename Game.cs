@@ -10,11 +10,12 @@ namespace SnackGame
         public int w = 80;
         public int h = 20;
 
-        public static ISceneChange nowScene;
+        public static ISceneChange nowScene = new BeginScene();
 
         public void Start()
         {
-            while (true)
+            
+           while (true)
             {
                 if (nowScene != null)
                 {
@@ -23,10 +24,11 @@ namespace SnackGame
             }
         }
 
-        public void GameSceneChange(E_Scene Scene){
-            
+        public void GameSceneChange(E_Scene Scene)
+        {
+
             Console.Clear();
-            
+
             switch (Scene)
             {
                 case E_Scene.game:
@@ -42,4 +44,6 @@ namespace SnackGame
             }
         }
     }
+    
+ 
 }
