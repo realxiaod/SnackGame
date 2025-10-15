@@ -7,8 +7,8 @@ namespace SnackGame
 {
     public class Game
     {
-        public int w = 80;
-        public int h = 20;
+        public static int w = 80;
+        public static int h = 20;
 
         public static ISceneChange nowScene = new BeginScene();
 
@@ -24,7 +24,7 @@ namespace SnackGame
             }
         }
 
-        public void GameSceneChange(E_Scene Scene)
+        public static void GameSceneChange(E_Scene Scene)
         {
 
             Console.Clear();

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SnackGame
 {
-    public class GameScene : ISceneChange
+    public class GameScene :ISceneChange
     {
         public void Update()
         {

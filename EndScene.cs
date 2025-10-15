@@ -5,11 +5,24 @@ using System.Threading.Tasks;
 
 namespace SnackGame
 {
-    public class EndScene : ISceneChange
+    class EndScene :BasedScene
     {
-        public void Update()
+        public EndScene()
         {
-            
+            strTitle = "游戏结束";
+            strOne = "重新开始";
+        }
+
+        public override void SceneChange()
+        {
+            if(nowSelIndex == 0)
+            {
+                Game.GameSceneChange(E_Scene.game);
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
         }
     }
 }
